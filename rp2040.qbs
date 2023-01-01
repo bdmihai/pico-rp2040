@@ -34,6 +34,7 @@ Product {
     rp.includePaths: [ '.' ]
     files: [
         'hardware/**/*.h',
+        'pico/**/*.h'
     ]
 
     Export {
