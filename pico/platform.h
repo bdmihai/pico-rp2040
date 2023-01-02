@@ -178,6 +178,20 @@ extern "C" {
  */
 #define __in_flash(group) __attribute__((section(".flashdata" group)))
 
+/*! \brief Section attribute macro for placement in heap
+ *  \ingroup pico_platform
+ *
+ * For example a `uint32_t` variable explicitly placed in flash (it will hard fault if you attempt to write it!)
+ *
+ *     uint32_t __in_heap("my_group_name") my_heap[100];
+ *
+ * The section attribute is `.heap.<group>`
+ *
+ * \param group a string suffix to use in the section name to distinguish groups that can be linker
+ *              garbage-collected independently
+ */
+#define __in_heap(group) __attribute__((section(".heap" group)))
+
 /*! \brief Indicates a function should not be stored in flash
  *  \ingroup pico_platform
  *
