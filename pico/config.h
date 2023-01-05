@@ -38,6 +38,12 @@
 #endif
 // no PICO_DEFAULT_WS2812_PIN
 
+// --- KEY ---
+#ifndef PICO_DEFAULT_KEY_PIN
+#define PICO_DEFAULT_KEY_PIN 23
+#endif
+// no PICO_DEFAULT_WS2812_PIN
+
 // --- I2C ---
 #ifndef PICO_DEFAULT_I2C
 #define PICO_DEFAULT_I2C 0
