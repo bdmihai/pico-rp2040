@@ -87,9 +87,4 @@
 // Drive high to force power supply into PWM mode (lower ripple on 3V3 at light loads)
 #define PICO_SMPS_MODE_PIN 23
 
-// PICO_CONFIG: PICO_CONFIG_RTOS_ADAPTER_HEADER, unquoted path to header include in the default pico/config.h for RTOS integration defines that must be included in all sources, group=pico_base
-#ifdef PICO_CONFIG_RTOS_ADAPTER_HEADER
-#include __PICO_XSTRING(PICO_CONFIG_RTOS_ADAPTER_HEADER)
-#endif
-
 #endif
